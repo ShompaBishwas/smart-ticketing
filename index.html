@@ -52,7 +52,7 @@
     </header>
     <main class=" ">
         <!--Banner Section-->
-        <section class="container mx-auto mb-5 lg:relative">
+        <section id="banner-section" class="container mx-auto mb-5 lg:relative">
             <div class="hero lg:min-h-screen rounded-[32px] lg:relative"
                 style="background-image: url(images/banner.png);">
                 <div class="hero-overlay bg-opacity-60 rounded-[32px]"></div>
@@ -62,7 +62,7 @@
                                 class="text-green-500 font-raleway font-extrabold">P Paribahan</span></h1>
                         <p class="mb-5">Green Line Paribahan is apparently a family owned transport company specializing
                             in transportation of passenger bus services since 1990.</p>
-                        <button class="btn bg-green-500 text-black border-none">Buy Tickets</button>
+                        <button onclick="buyTicketButton('paribahan-section')" class="btn bg-green-500 text-black border-none">Buy Tickets</button>
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@
             </div>
         </section>
         <!-- GreebLine Paribahan Section-->
-        <section class="border-t-green-500 border-t-2 rounded-[55px] mt-10">
+        <section id="paribahan-section" class="border-t-green-500 border-t-2 rounded-[55px] mt-10">
             <div class="container mx-auto mb-5">
                 <div class="mt-10 text-center">
                     <h1 class="text-2xl font-bold font-raleway">P.H Paribahan</h1>
@@ -168,7 +168,7 @@
                             </div>
                             <div class="flex">
                                 <button class="btn"><span><img src="images/seat-green.png" alt=""></span><span
-                                        class="text-green-400 text-lg font-semibold">40 Seats left</span></button>
+                                        class="text-green-400 text-lg font-semibold"><span id="remove-seat-number">32</span> Seats left</span></button>
                             </div>
                         </div>
                         <div class="p-10 bg-slate-100 rounded-2xl mt-6">
@@ -239,75 +239,58 @@
                                     stroke-linejoin="round" stroke-linecap="round" />
                             </svg></button>
                     </div>
-
-                    <div class="flex justify-between">
-                        <div class="">
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">A1</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">A2</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">B1</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">B2</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">C1</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">C2</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">D1</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">D2</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">E1</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">E2</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">F1</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">F2</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">G1</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">G2</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">H1</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">H2</kbd>
-                            </div>
+                    <div class="flex justify-evenly">
+                        <div class="grid grid-cols-1 mr-4">
+                            <button class="btn ">A</button>
+                            <button class="btn ">C</button>
+                            <button class="btn ">C</button>
+                            <button class="btn ">C</button>
+                            <button class="btn ">C</button>
+                            <button class="btn ">D</button>
+                            <button class="btn ">B</button>
+                            <button class="btn ">E</button>
+                            <button class="btn ">F</button>
+                            <button class="btn ">G</button>
+                            <button class="btn ">H</button>
+                            <button class="btn ">I</button>
                         </div>
-                        <div class="">
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">A3</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">A4</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">B3</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">B4</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">C3</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">C4</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">D3</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">D4</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">E3</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">E4</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">F3</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">F4</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">G3</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">G4</kbd>
-                            </div>
-                            <div class="mb-3">
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">H3</kbd>
-                                <kbd class="kbd kbd-lg pl-8 pr-8 mb-3">H4</kbd>
-                            </div>
+                        <div class="grid grid-cols-4 gap-3 flex-1 justify-between">
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">A1</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">A2</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">A3</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">A4</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">B1</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">B2</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">B3</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">B4</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">C1</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">C2</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">C3</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">C4</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">D1</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">D2</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">D3</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">D4</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">E1</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">E2</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">E3</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">E4</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">F1</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">F2</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">F3</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">F4</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">G1</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">G2</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">G3</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">G4</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">H1</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">H2</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">H3</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">H4</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">I1</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">I2</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">I3</kbd>
+                            <kbd class="kbd add-btn kbd-lg pl-8 pr-8 mb-3">I4</kbd>
                         </div>
                     </div>
                 </div>
@@ -322,7 +305,7 @@
                         </div>
                         <div>
                             <div class="flex gap-36 lg:pl-16 pr-16">
-                                <p class="font-semibold text-sm font-inter pl-4 lg:pl-0">Seat <span class="bg-green-500 text-white rounded-full p-2">0</span></p>
+                                <p class="font-semibold text-sm font-inter pl-4 lg:pl-0">Seat <span id="add-seat-number" class="bg-green-500 text-white rounded-full p-2">0</span></p>
                                 <p class="font-semibold text-sm font-inter">Class</p>
                                 <p class="font-semibold text-sm font-inter">Price</p>
                             </div>
@@ -330,18 +313,15 @@
                         <div class="mt-6 border-dashed border-2 mb-6">
                             <hr>
                         </div>
-                        <div class="flex gap-36 pl-16 pr-16">
-                            <p></p>
-                            <p></p>
-                            <p></p>
+                        <div id="selected-area" class=" ">
                         </div>
                         <div class="mt-6 border-dashed border-2 mb-2">
                             <hr>
                         </div>
                         <div class="flex justify-between pr-16 pl-16 mb-6">
                             <p class="font-semibold text-sm font-inter">Total Price</p>
-                            <p class="font-semibold text-sm font-inter">BDT <span
-                                    class="font-semibold text-sm font-inter"></span></p>
+                            <p class="font-semibold text-sm font-inter">BDT <span id="total-cost"
+                                    class="font-semibold text-sm font-inter">0</span></p>
                         </div>
                         <label class="input input-bordered flex items-center gap-2 mb-6">
                             <input type="text" class="grow" placeholder="Have any copupon?" />
@@ -354,12 +334,16 @@
                         </div>
                         <div class="">
                             <h1 class="mb-8 mt-8 font-inter font-bold text-sm">Passenger Name</h1>
-                            <input class="w-full h-10 mb-8"  type="text" placeholder="Enter your name">
-                            <h1 class="mb-8 font-inter font-bold text-sm">Phone Number*</h1>
-                            <input class="w-full h-10 mb-8" type="number" name="" id="" placeholder="Enter your phone number">
+                            <input class="w-full h-10 mb-8 p-8"  type="text" placeholder="Enter your name">
+                            <h1 class="mb-8 font-inter font-bold text-sm">Phone Number</h1>
+                            <input class="w-full h-10 mb-8 p-8" type="number" name="" id="" placeholder="Enter your phone number">
                             <h1 class="mb-8 font-inter font-bold text-sm">Email ID</h1>
-                            <input class="w-full h-10 mb-8" type="email" name="" id="" placeholder="Enter your email id">
+                            <input class="w-full h-10 mb-8 p-8" type="email" name="" id="" placeholder="Enter your email id">
                             <button class="btn w-full bg-green-500 text-white font-inter font-bold text-sm">Next</button>
+                            <div class="flex justify-center gap-10 mt-1">
+                                <p class="underline">Terms and Conditions</p>
+                                <p class="underline">Cancellation Policy</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -440,6 +424,7 @@
         </aside>
     </footer>
     <script src="scripts/scripts.js"></script>
+    <script src="scripts/function.js"></script>
 </body>
 
 </html>
