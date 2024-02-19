@@ -12,6 +12,9 @@ let reverseCount = 40;
 let selectedSeat = 0;
 for (const btn of allBtn) {
     btn.addEventListener('click', function (event) {
+        if(btn.lenth <4){
+            btn.push(event.target.value);
+        }
         event.target.style.backgroundColor = '#1DD100';
         count = count + 1;
         reverseCount = reverseCount - 1;
